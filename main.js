@@ -17,32 +17,20 @@ let osmLayer = L.tileLayer(
 let map = L.map('map', {
     zoomControl: true,
     center: [49.6475,7.1651],
-    zoom: 10,
+    zoom: 15,
     layers: [osmLayer, cities]
 });
 
-
-  
 //
-let  streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFza290YSIsImEiOiJjaXp0bmI3M3EwMDBvMndzMHJudnlsMDllIn0.jV7rTNmfiqjx57usCu54rQ', {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: `© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>`});
-let baseMaps = {
-    "OpenStreetMap": osmLayer,
-    "Mapbox Streets": streets
-};
-
 let overlayMaps = {
     "Cities": cities
 };
 
-
-
-let layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+let layerControl = L.control.layers( overlayMaps).addTo(map);
 
 const crownHill = L.marker([49.6875,7.3651]).bindPopup('This is Crown Hill Park.');
 const rubyHill = L.marker([49.6875,7.5651]).bindPopup('This is Ruby Hill Park.');
 const parks = L.layerGroup([crownHill, rubyHill]);
-//layerControl.addOverlay(parks, 'Parks');
-
 //
 //feeder
 let feederClusters = L.Geoserver.wms("http://localhost:8086/geoserver/netzplan/wms", {

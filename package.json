@@ -1,5 +1,12 @@
 {
   "dependencies": {
-    "leaflet": "^1.9.3"
+    "bootstrap": "^5.2.3",
+    "leaflet": "^1.9.3",
+    "leaflet-draw": "^1.0.4",
+    "leaflet-providers": "^1.13.0",
+    "leaflet-responsive-popup": "^1.0.0",
+    "leaflet-routing-machine": "^3.2.12",
+    "leaflet-search": "^3.0.5",
+    "leaflet.markercluster": "^1.5.3"
   }
 }
