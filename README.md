@@ -7,3 +7,7 @@
 
 Here is the sample screenshot of the demo application.
 https://user-images.githubusercontent.com/2241234/205919780-ce7894ae-63b6-4993-a8c0-03b992d54a72.png
+
+[
+![geoserver_leaflet_screenshot](https://user-images.githubusercontent.com/2241234/205920656-5b6952fb-0699-45b5-bfae-409b51541cda.png)
+](url)
